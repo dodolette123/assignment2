@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+      <title>Home Page</title>
+    </head>
+    <body>
+        <table border='1' cellpadding="10">
+       
+  
+        <tbody>
+          <tr>
+            <th>
+              <div>
+                <ul>
+                  <li><a href="/home">Home</a></li> 
+                  <li><a href="/addNewBook">Add new book</a></li>
+                  <li><a href="/DeleteABook">Delete book</a></li>
+
+                </ul>
+              </div>
+            </th>
+          </tr>
+        </tbody>
+  
+      </table>
+  
+  </body>
+  </html>
+<% subscribers.forEach(s=>
+    { %> 
+        <h1>Book<%= s.zipCode %></h1>
+         <p>
+            <b>Name:</b>
+            <%= s.name %>
+        </p>
+        <p>
+            <b>Author:</b>
+            <%= s.email %>
+        </p>
+        <a href=<%= s.link %>>
+            <b>Buy on Amazon!</b>
+        </a>
+    
+    
+    <% });
+%>

@@ -1,0 +1,41 @@
+<h1>Click on any book to see the details</h1>
+
+<html>
+  <head>
+    <title>Home Page</title>
+  </head>
+  <body>
+    <table border='1' cellpadding="10">
+     
+
+      <tbody>
+        <tr>
+          <th>
+            <div>
+              <ul>
+                <li><a href="/home">Home</a></li> 
+                <li><a href="/addNewBook">Add new book</a></li>
+                <li><a href="/DeleteABook">Delete book</a></li>
+
+              </ul>
+            </div>
+          </th>
+        </tr>
+      </tbody>
+
+    </table>
+
+</body>
+</html>
+<% subscribers.forEach(s=>
+    { %> 
+        <a href="/books/<%=s.zipCode %>"> <p>
+            <b>Name:</b>
+            <%= s.name %>
+        </p></a>
+        <a href="<%= `/books/${s._id}/delete?_method=DELETE` %>"
+            onclick="return confirm('Are you sure you want to delete')">Delete</a>
+    
+    
+    <% });
+%>
